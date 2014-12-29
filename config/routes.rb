@@ -1,11 +1,17 @@
 Rails.application.routes.draw do
+  get 'sessions/callback'
+
+  devise_for :users, :only => [:registrations]
   resources :comments
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'root#index'
+
+  get "/users/auth/:provider/callback" => "sessions#callback"
+  get "/signout" => "sessions#destroy"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
