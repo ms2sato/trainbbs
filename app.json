@@ -1,5 +1,11 @@
 {
   "name": "train-bbs",
+  "addons": [
+    "heroku-postgresql"
+  ],
   "env": {
+  },
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate"
   }
 }
