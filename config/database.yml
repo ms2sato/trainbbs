@@ -22,13 +22,13 @@ test:
   database: <%= ENV['TEST_DB_DATABASE'] || 'hackon_test' %>
   password: <%= ENV['TEST_DB_PASSWORD'] || '' %>
 
-production:
-  encoding: utf8
-  adapter: <%= ENV['DB_ADAPTER'] || 'postgresql'%>
-  port: <%= ENV['DB_PORT'] || '5432' %>
-  username: <%= ENV['DB_USER'] %>
-  database: <%= ENV['DB_DATABASE'] || 'hackon_dev' %>
-  password: <%= ENV['DB_PASSWORD'] || '' %>
+#production:
+#  encoding: utf8
+#  adapter: <%= ENV['DB_ADAPTER'] || 'postgresql'%>
+#  port: <%= ENV['DB_PORT'] || '5432' %>
+#  username: <%= ENV['DB_USER'] %>
+#  database: <%= ENV['DB_DATABASE'] || 'hackon_dev' %>
+#  password: <%= ENV['DB_PASSWORD'] || '' %>
 
 staging:
   encoding: utf8
