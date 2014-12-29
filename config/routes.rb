@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'sessions/callback'
 
-  devise_for :users
+  devise_for :users, :only => [:registrations]
   resources :comments
 
   # The priority is based upon order of creation: first created -> highest priority.
