@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141229051309) do
+ActiveRecord::Schema.define(version: 20141229063134) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,8 +22,12 @@ ActiveRecord::Schema.define(version: 20141229051309) do
     t.integer  "status",     default: 0, null: false
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.integer  "parent_id"
+    t.integer  "reply_to"
   end
 
   add_index "comments", ["title"], name: "index_comments_on_title", using: :btree
 
+  add_foreign_key "comments", "comments", column: "parent_id", name: "comments_parent_id_fk"
+  add_foreign_key "comments", "comments", column: "reply_to", name: "comments_reply_to_fk"
 end

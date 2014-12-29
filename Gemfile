@@ -30,6 +30,8 @@ gem 'devise'
 gem 'cancancan'
 gem 'inum'
 gem 'omniauth-github'
+gem 'mailboxer', :git => 'git://github.com/div/mailboxer.git', :branch => 'rails42-foreigner'
+
 
 
 # Use ActiveModel has_secure_password

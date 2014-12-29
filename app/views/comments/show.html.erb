@@ -10,10 +10,26 @@
   <%= @comment.body %>
 </p>
 
-<p>
-  <strong>Status:</strong>
-  <%= @comment.status %>
-</p>
-
 <%= link_to 'Edit', edit_comment_path(@comment) %> |
 <%= link_to 'Back', comments_path %>
+
+<hr>
+
+<% if @comment.comments.size != 0 %>
+  <% @comment.comments.each do |comment| %>
+    <div>
+      <%= comment.body %>
+    </div>
+  <% end %>
+  <hr>
+<% end %>
+
+
+<h2>コメントする</h2>
+<%= render 'child_form' %>
+
+
+
+
+
+
