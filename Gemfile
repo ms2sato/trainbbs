@@ -31,6 +31,9 @@ gem 'cancancan'
 gem 'inum'
 gem 'omniauth-github'
 gem 'mailboxer', :git => 'git://github.com/div/mailboxer.git', :branch => 'rails42-foreigner'
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails', branch: 'bootstrap3'
 
 
 
