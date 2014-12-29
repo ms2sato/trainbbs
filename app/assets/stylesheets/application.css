@@ -12,9 +12,5 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap-material-design/dist/css/material
  */
-
-body {
-    min-height: 800px;
-    padding-top: 70px;
-}
