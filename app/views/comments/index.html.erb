@@ -1,29 +1,33 @@
-<h1>Listing Comments</h1>
+<div id="top">
+  <h1>これは何ですか？</h1>
+  <p>
+    プログラミングに関する質問ができる掲示板です。あなたの抱えている問題を質問することができます。
+    ただ、回答は貰うことが出来ません。回答する人はヒントだけを出してあげて、答えに自力で辿り着くように誘導してあげて下さい。
+  </p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>Status</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
+  <h1>新着の質問</h1>
+
+  <div class="new-post">
+    <%= link_to '新しく質問したい！', new_comment_path, class: 'btn btn-primary' %>
+  </div>
+
+  <article>
     <% @comments.each do |comment| %>
-      <tr>
-        <td><%= comment.title %></td>
-        <td><%= comment.body %></td>
-        <td><%= comment.status %></td>
-        <td><%= link_to 'Show', comment %></td>
-        <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-        <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="row line">
+        <div class="col-md-8 title">
+          <%= link_to comment do %><%= comment.title %>
+          <% end %>
+        </div>
+        <div class="col-md-2 comment-count">
+          <div><span class="number"><%= comment.comments.size %></span>コメント</div>
+        </div>
+        <div class="col-md-2 status">
+          <%= comment.status %>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </article>
 
-<br>
+</div>
 
-<%= link_to 'New Comment', new_comment_path %>

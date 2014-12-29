@@ -1,3 +1,38 @@
 // Place all the styles related to the comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#top {
+
+  .new-post{
+    font-size: 28px;
+  }
+
+  article {
+    .title {
+      font-size: 20px;
+    }
+
+    .line {
+      margin-bottom: 30px;
+    }
+
+    .comment-count {
+      .number {
+        font-size: 18px;
+        margin-right: 2px;
+      }
+    }
+
+  }
+}
+
+#show {
+
+  .comment {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+
+}
