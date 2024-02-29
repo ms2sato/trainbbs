@@ -8,7 +8,7 @@ GIT
       rails (>= 3.2.0)
 
 GIT
-  remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
+  remote: https://github.com/seyhunak/twitter-bootstrap-rails.git
   revision: 1d93c5a77049b3d21d17c847ad0531d7714fa229
   branch: bootstrap3
   specs:
@@ -150,7 +150,7 @@ GEM
       omniauth (~> 1.2)
     orm_adapter (0.5.0)
     pg (0.17.1)
-    rack (1.6.0)
+    rack (1.6.13)
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.2.0)
